@@ -1,0 +1,37 @@
+{
+  "name": "reason-aoc-starter",
+  "version": "0.1.0",
+  "description": "Starter Reason Project",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildDev": "pesy build",
+    "release": {
+      "rewritePrefix": true,
+      "releasedBinaries": [ "ReasonAocStarterApp" ]
+    }
+  },
+  "pesy": {
+    "azure-project": "prometheansacrifice/reason-aoc-starter",
+    "github": "ManasJayanth/reason-aoc-starter"
+  },
+  "buildDirs": {
+    "src/lib": {},
+    "src/bin": {
+      "imports": [ "Console = require('@reason-native/console/lib')", "Library = require('reason-aoc-starter/src/lib')" ],
+      "bin": { "ReasonAocStarterApp": "ReasonAocStarterApp.re" }
+    }
+  },
+  "scripts": { "start": "esy x ReasonAocStarterApp" },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": "*",
+    "@pesy/esy-pesy": "0.1.0-alpha.13",
+    "@reason-native/console": "^0.1.0",
+    "ocaml": "~4.9.0"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam",
+    "refmterr": "*"
+  }
+}
