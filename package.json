@@ -7,7 +7,9 @@
     "buildDev": "pesy build",
     "release": {
       "rewritePrefix": true,
-      "releasedBinaries": [ "ReasonAocStarterApp" ]
+      "releasedBinaries": [
+        "ReasonAocStarterApp"
+      ]
     }
   },
   "pesy": {
@@ -17,16 +19,43 @@
   "buildDirs": {
     "src/lib": {},
     "src/bin": {
-      "imports": [ "Console = require('@reason-native/console/lib')", "Library = require('reason-aoc-starter/src/lib')" ],
-      "bin": { "ReasonAocStarterApp": "ReasonAocStarterApp.re" }
+      "imports": [
+        "Console = require('@reason-native/console/lib')",
+        "Library = require('reason-aoc-starter/src/lib')"
+      ],
+      "bin": {
+        "ReasonAocStarterApp": "ReasonAocStarterApp.re"
+      }
+    },
+    "test/lib": {
+      "imports": [
+        "Library = require('reason-aoc-starter/src/lib')",
+        "Rely = require('@reason-native/rely/lib')"
+      ],
+      "flags": [
+        "-linkall",
+        "-g",
+        "-w",
+        "-9"
+      ]
+    },
+    "test/bin": {
+      "imports": [
+        "Test = require('reason-aoc-starter/test/lib')"
+      ],
+      "bin": "RunUnitTests.re"
     }
   },
-  "scripts": { "start": "esy x ReasonAocStarterApp" },
+  "scripts": {
+    "start": "esy x ReasonAocStarterApp",
+    "test": "esy x RunUnitTests"
+  },
   "dependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": "*",
     "@pesy/esy-pesy": "0.1.0-alpha.13",
     "@reason-native/console": "^0.1.0",
+    "@reason-native/rely": "^3.2.1",
     "ocaml": "~4.9.0"
   },
   "devDependencies": {
