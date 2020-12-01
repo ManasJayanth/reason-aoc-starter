@@ -30,3 +30,8 @@ yarn global install esy
 - [Dune](https://dune.readthedocs.io/en/stable/) - to build the project
 - [Pesy](https://github.com/esy/pesy) - to provide an alternative convenient JSON syntax for Dune file. Optional. Use `esy pesy eject ./path/to/sub-package` to use the Dune file for that subpackage.
 
+
+## Documentation for provided helper utils
+
+(TODO)
+
