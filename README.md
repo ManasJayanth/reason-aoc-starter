@@ -18,6 +18,15 @@ npm i -g esy
 yarn global install esy
 ```
 
-## Helper functions available
+## Helper libraries available
 
-(TODO)
+ - `@reason-native/console` for logging
+ - `@reason-native/fs` for file utilities
+ - `@reason-native/fp` for type safe path handling
+ - `@reason-native/rely` for unit testing the puzzle cases
+ 
+## Build tools used
+
+- [Dune](https://dune.readthedocs.io/en/stable/) - to build the project
+- [Pesy](https://github.com/esy/pesy) - to provide an alternative convenient JSON syntax for Dune file. Optional. Use `esy pesy eject ./path/to/sub-package` to use the Dune file for that subpackage.
+
