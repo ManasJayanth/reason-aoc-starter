@@ -1,2 +1,2 @@
 print_endline("Running Test Program:");
-let () = print_endline(Library.Util.hello());
+let () = (Library.Util.hello()) |> List.iter(print_endline);

@@ -17,7 +17,12 @@
     "github": "ManasJayanth/reason-aoc-starter"
   },
   "buildDirs": {
-    "src/lib": {},
+    "src/lib": {
+      "imports": [
+        "Fp = require('@reason-native/fp')",
+        "Fs = require('@reason-native/fs/lib')"
+      ]
+    },
     "src/bin": {
       "imports": [
         "Console = require('@reason-native/console/lib')",
@@ -56,11 +61,17 @@
     "@pesy/esy-pesy": "0.1.0-alpha.13",
     "@reason-native/console": "^0.1.0",
     "@reason-native/rely": "^3.2.1",
+    "@reason-native/fp": "*",
+    "@reason-native/fs": "*",
     "ocaml": "~4.9.0"
   },
   "devDependencies": {
     "@opam/merlin": "*",
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam",
     "refmterr": "*"
+  },
+  "resolutions": {
+    "@reason-native/fs": "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+    "@reason-native/fp": "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
   }
 }

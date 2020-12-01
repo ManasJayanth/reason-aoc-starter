@@ -1,1 +1,1 @@
-let hello: unit => string;
+let hello: unit => list(string);

@@ -1,5 +1,5 @@
 {
-  "checksum": "4d8fc8bab27fe71e754b2234e01dba1e",
+  "checksum": "048b2c29d3c5c66690a5cdaa9c98edab",
   "root": "reason-aoc-starter@link-dev:./package.json",
   "node": {
     "refmterr@3.3.2@d41d8cd9": {
@@ -34,13 +34,15 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.9.1000@d41d8cd9", "@reason-native/rely@3.2.1@d41d8cd9",
+        "@reason-native/fs@github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
+        "@reason-native/fp@github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
         "@reason-native/console@0.1.0@d41d8cd9",
         "@pesy/esy-pesy@0.1.0-alpha.13@d41d8cd9",
         "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
       ],
       "devDependencies": [
         "refmterr@3.3.2@d41d8cd9",
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#3d2e533208390e4cf06a753b6327f6a42502eb73@d41d8cd9",
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#db71298646e9cb1dcfa72d4ffceb747bf2a29113@d41d8cd9",
         "@opam/merlin@opam:3.4.2@9a4d1fd4"
       ]
     },
@@ -110,6 +112,45 @@
         "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
       ],
       "devDependencies": []
+    },
+    "@reason-native/fs@github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9": {
+      "id":
+        "@reason-native/fs@github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
+      "name": "@reason-native/fs",
+      "version":
+        "github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.9.1000@d41d8cd9",
+        "@reason-native/fp@github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
+      ],
+      "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
+    },
+    "@reason-native/fp@github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9": {
+      "id":
+        "@reason-native/fp@github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
+      "name": "@reason-native/fp",
+      "version":
+        "github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+      "source": {
+        "type": "install",
+        "source": [
+          "github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.9.1000@d41d8cd9", "@opam/dune@opam:2.7.1@f5f493bc",
+        "@esy-ocaml/reason@3.6.2@d41d8cd9"
+      ],
+      "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
     },
     "@reason-native/file-context-printer@0.0.3@d41d8cd9": {
       "id": "@reason-native/file-context-printer@0.0.3@d41d8cd9",
@@ -630,16 +671,16 @@
       ],
       "devDependencies": [ "ocaml@4.9.1000@d41d8cd9" ]
     },
-    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#3d2e533208390e4cf06a753b6327f6a42502eb73@d41d8cd9": {
+    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#db71298646e9cb1dcfa72d4ffceb747bf2a29113@d41d8cd9": {
       "id":
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#3d2e533208390e4cf06a753b6327f6a42502eb73@d41d8cd9",
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#db71298646e9cb1dcfa72d4ffceb747bf2a29113@d41d8cd9",
       "name": "@opam/ocaml-lsp-server",
       "version":
-        "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#3d2e533208390e4cf06a753b6327f6a42502eb73",
+        "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#db71298646e9cb1dcfa72d4ffceb747bf2a29113",
       "source": {
         "type": "install",
         "source": [
-          "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#3d2e533208390e4cf06a753b6327f6a42502eb73"
+          "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#db71298646e9cb1dcfa72d4ffceb747bf2a29113"
         ]
       },
       "overrides": [],
