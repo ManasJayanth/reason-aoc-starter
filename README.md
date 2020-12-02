@@ -30,6 +30,8 @@ Tips and new ideas are welcome too!
  - `@reason-native/fs` for file utilities
  - `@reason-native/fp` for type safe path handling
  - `@reason-native/rely` for unit testing the puzzle cases
+ - `@reason-native/cli` for CLI parsing
+ - `@opam/container` for an extended standard library
  - `@opam/angstrom` for parsing the puzzle input
  
 ## Build tools used
