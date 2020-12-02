@@ -7,7 +7,9 @@
     "buildDev": "pesy build",
     "release": {
       "rewritePrefix": true,
-      "releasedBinaries": [ "ReasonAocStarterApp" ]
+      "releasedBinaries": [
+        "ReasonAocStarterApp"
+      ]
     }
   },
   "pesy": {
@@ -17,26 +19,37 @@
   "buildDirs": {
     "src/lib": {
       "imports": [
+        "Containers = require('@opam/containers')",
         "Fp = require('@reason-native/fp')",
         "Fs = require('@reason-native/fs/lib')"
       ]
     },
     "src/bin": {
       "imports": [
+        "CLI = require('@reason-native/cli/lib')",
         "Console = require('@reason-native/console/lib')",
         "Library = require('reason-aoc-starter/src/lib')"
       ],
-      "bin": { "ReasonAocStarterApp": "ReasonAocStarterApp.re" }
+      "bin": {
+        "ReasonAocStarterApp": "ReasonAocStarterApp.re"
+      }
     },
     "test/lib": {
       "imports": [
         "Library = require('reason-aoc-starter/src/lib')",
         "Rely = require('@reason-native/rely/lib')"
       ],
-      "flags": [ "-linkall", "-g", "-w", "-9" ]
+      "flags": [
+        "-linkall",
+        "-g",
+        "-w",
+        "-9"
+      ]
     },
     "test/bin": {
-      "imports": [ "Test = require('reason-aoc-starter/test/lib')" ],
+      "imports": [
+        "Test = require('reason-aoc-starter/test/lib')"
+      ],
       "bin": "RunUnitTests.re"
     }
   },
@@ -52,7 +65,9 @@
     "@reason-native/console": "^0.1.0",
     "@reason-native/fp": "*",
     "@reason-native/fs": "*",
+    "@reason-native/cli": "*",
     "@reason-native/rely": "^3.2.1",
+    "@opam/containers": "*",
     "ocaml": "~4.9.0"
   },
   "devDependencies": {
@@ -61,9 +76,8 @@
     "refmterr": "*"
   },
   "resolutions": {
-    "@reason-native/fs":
-      "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
-    "@reason-native/fp":
-      "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
+    "@reason-native/cli": "ManasJayanth/reason-native:cli.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+    "@reason-native/fs": "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+    "@reason-native/fp": "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
   }
 }

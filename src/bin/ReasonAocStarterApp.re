@@ -1,13 +1,16 @@
-Console.log(Library.Util.stringToCharList("aoc2020"));
+open Containers;
+open Library;
 
 CLI.(
   program("aoc")
   |> version("1.0.0")
   |> description("Solve Advent of Code")
-  |> argument("input", "Input text file", String)
+  |> argument("day", "Day of the AoC month", String)
   |> action(({log, args}) => {
-       log.info("Shipping:");
-       log.info(args.string("input"));
+       switch (args.string("day")) {
+       | "day-one" => DayOne.run()
+       | _ => Console.log("Not there yet")
+       }
      })
   |> parseAndRun(Sys.argv)
 );
