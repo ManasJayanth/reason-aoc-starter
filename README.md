@@ -24,6 +24,7 @@ yarn global install esy
  - `@reason-native/fs` for file utilities
  - `@reason-native/fp` for type safe path handling
  - `@reason-native/rely` for unit testing the puzzle cases
+ - `@opam/angstrom` for parsing the puzzle input
  
 ## Build tools used
 
