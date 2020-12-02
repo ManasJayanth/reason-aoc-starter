@@ -1,8 +1,3 @@
-let cwd = Sys.getcwd();
-let () =
-  Library.Util.readLineFromFile(cwd ++ "/src/bin/sample_input")
-  |> List.iter(print_endline);
-
 Console.log(Library.Util.stringToCharList("aoc2020"));
 
 CLI.(
