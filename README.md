@@ -15,7 +15,7 @@ If you dont have `esy` already installed,
 ```sh
 npm i -g esy
 # or
-yarn global install esy
+yarn global add esy
 ```
 
 ## Helper libraries available
