@@ -42,3 +42,22 @@ Tips and new ideas are welcome too!
 
 (TODO)
 
+
+## Documentation (quick primers) for included libraries
+
+### `@reason-native/console` 
+
+Reason is a type safe language and functions have to be intentionally
+written in a way accept arguments of any type. Benefits of such strong
+typing is seen in large codebases, but for simple printing, one could
+need type specific printers like `print_int` etc.
+
+`@reason-native/console` provided a familiar generic `Console.log`
+inspired by the browser's `console.log`. See [here](https://reason-native.com/docs/console/)
+
+```reason
+Console.log("Some string here");
+Console.log(true);
+Console.log(Some("hi"));
+Console.log(None);
+```
