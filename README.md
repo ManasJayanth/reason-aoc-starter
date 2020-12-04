@@ -18,6 +18,14 @@ npm i -g esy
 yarn global add esy
 ```
 
+## Editor setup
+
+We recommend the following editor plugins
+
+1. [OCaml Platform](https://marketplace.visualstudio.com/items?itemName=ocamllabs.ocaml-platform) for VSCode/VSCodium
+2. [reason-mode](https://github.com/reasonml-editor/reason-mode) with [esy-mode](https://github.com/ManasJayanth/esy-mode) for Emacs
+3. [vim-reasonml]() for Vim
+
 ## Forum discussion
 
 Associated forum post can be found [here](https://reasonml.chat/t/advent-of-code-2020-starter-kit-and-tips/2555). 
