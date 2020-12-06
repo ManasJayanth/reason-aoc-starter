@@ -7,7 +7,7 @@
     "buildDev": "pesy build",
     "release": {
       "rewritePrefix": true,
-      "releasedBinaries": [
+      "bin": [
         "ReasonAocStarterApp"
       ]
     }
