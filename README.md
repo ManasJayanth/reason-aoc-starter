@@ -29,7 +29,7 @@ We recommend the following editor plugins
 ## Forum discussion
 
 Associated forum post can be found [here](https://reasonml.chat/t/advent-of-code-2020-starter-kit-and-tips/2555). 
-If you have any questions, feel free to ask on the there. Tag me on Discord if you like on Reason Servers. I'm `Manas (prometheansacrifice)#0219` there.
+If you have any questions, feel free to ask on the there. Tag me on Discord if you are on Reason Servers. I'm `Manas (prometheansacrifice)#0219` there.
 Tips and new ideas are welcome too!
 
 ## Helper libraries available
