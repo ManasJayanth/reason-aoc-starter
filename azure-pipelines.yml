@@ -85,3 +85,13 @@ jobs:
       demands: node.js
     steps:
       - template: .ci/cross-release.yml
+
+schedules:
+- cron: "0 */12 * * *"
+  displayName: CRON build - twice a day
+  branches:
+    include:
+    - master
+    - releases/*
+    exclude:
+    - releases/ancient/*
