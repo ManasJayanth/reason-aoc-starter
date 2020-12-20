@@ -55,7 +55,10 @@
   },
   "scripts": {
     "start": "esy x ReasonAocStarterApp",
-    "test": "esy x RunUnitTests"
+    "test": "esy x RunUnitTests",
+    "start:release": "esy @release x ReasonAocStarterApp",
+    "test:release": "esy @release x RunUnitTests",
+    "build:release": "esy @release"
   },
   "dependencies": {
     "@esy-ocaml/reason": "*",

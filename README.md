@@ -10,6 +10,14 @@ cd reason-aoc-starter
 esy
 ```
 
+To enable Flambda optimisations on your compiled binaries, use `@release`
+
+Examples,
+```
+esy @release # to just build
+esy start:release # to run flambda opt enabled binary
+```
+
 If you dont have `esy` already installed,
 
 ```sh

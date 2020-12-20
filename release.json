@@ -1,0 +1,14 @@
+{
+  "source": "./package.json",
+  "override": {
+    "dependencies": {
+      "ocaml": "*"
+    },
+    "resolutions": {
+      "@reason-native/cli": "ManasJayanth/reason-native:cli.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+      "@reason-native/fs": "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+      "@reason-native/fp": "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
+      "ocaml": "esy-ocaml/ocaml#2707aa9c2b35bbdbffdab230eaf6cca15db36b34"
+    }
+  }
+}

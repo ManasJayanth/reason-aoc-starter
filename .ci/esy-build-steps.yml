@@ -18,3 +18,5 @@ steps:
   - script: "esy release"
     displayName: "esy release"
   - template: utils/publish-build-cache.yml
+  - script: "esy @release"
+    displayName: "esy @release (Flambda)"
