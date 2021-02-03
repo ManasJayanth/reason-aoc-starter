@@ -41,7 +41,6 @@ steps:
     workingDirectory: $(Build.StagingDirectory)
 
   - task: PublishBuildArtifacts@1
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'IndividualCI'))
     displayName: '[Cache][Publish] Upload tarball'
     # TODO: The CI Build caches are pulled down by the last successful buildID
     # for the target branch.
@@ -52,7 +51,6 @@ steps:
       parallelCount: 8
 
   - task: PublishBuildArtifacts@1
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'IndividualCI'))
     displayName: '[Cache][Publish] upload checksum'
     inputs:
       pathToPublish: '$(Build.StagingDirectory)/checksum.txt'
