@@ -13,7 +13,7 @@
     }
   },
   "pesy": {
-    "azure-project": "prometheansacrifice/reason-aoc-starter",
+    "azure-project": "prometheansacrifice/Tutorials",
     "github": "ManasJayanth/reason-aoc-starter"
   },
   "buildDirs": {
