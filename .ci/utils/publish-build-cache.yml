@@ -30,15 +30,9 @@ steps:
       archiveType: 'zip'
       archiveFile: '$(Build.StagingDirectory)/_export.zip'
 
-  - bash: 'shasum _export.zip | cut -d " " -f 1 | tr -d "\n" > checksum.txt'
-    condition: or(eq(variables['Agent.OS'], 'Darwin'), eq(variables['Agent.OS'], 'Linux'))
-    displayName: '[Cache][Publish] calcule export.zip sha1 on Linux/Darwin'
-    workingDirectory: $(Build.StagingDirectory)
-
-  - bash: 'sha1sum _export.zip | cut -d " " -f 1 | tr -d "\n" > checksum.txt'
-    condition: and(succeeded(), eq(variables['Build.Reason'], 'IndividualCI'), eq( variables['Agent.OS'], 'Windows_NT'))
-    displayName: '[Cache][Publish] calcule export.zip sha1 on Windows'
-    workingDirectory: $(Build.StagingDirectory)
+  - bash: "shasum -a 256 _export.zip | awk '{ print $1 }' > checksum.txt && mv checksum.txt _export.zip $(Build.StagingDirectory)"
+    displayName: "Computing sha256 of the zip"
+    workingDirectory: $(Agent.HomeDirectory)/hello-reason
 
   - task: PublishBuildArtifacts@1
     displayName: '[Cache][Publish] Upload tarball'
