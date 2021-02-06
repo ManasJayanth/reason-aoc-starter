@@ -32,6 +32,7 @@ steps:
 
   - bash: "shasum -a 256 _export.zip | awk '{ print $1 }' > checksum.txt && mv checksum.txt _export.zip $(Build.StagingDirectory)"
     displayName: "Computing sha256 of the zip"
+    workingDirectory: $(Build.StagingDirectory)
 
   - task: PublishBuildArtifacts@1
     displayName: '[Cache][Publish] Upload tarball'
