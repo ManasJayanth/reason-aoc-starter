@@ -30,7 +30,7 @@ steps:
       archiveType: 'zip'
       archiveFile: '$(Build.StagingDirectory)/_export.zip'
 
-  - bash: "shasum -a 256 _export.zip | awk '{ print $1 }' > checksum.txt && mv checksum.txt _export.zip $(Build.StagingDirectory)"
+  - bash: "shasum -a 256 _export.zip | awk '{ print $1 }' > checksum.txt"
     displayName: "Computing sha256 of the zip"
     workingDirectory: $(Build.StagingDirectory)
 
